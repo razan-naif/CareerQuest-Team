@@ -223,6 +223,21 @@ body {
 }
 
 
+/* ---------- Google Login button style ---------- */
+.google-btn-container {
+  text-align: center;
+  margin-top: 20px;
+}
+.google-btn {
+  display: inline-block;
+  border-radius: 50px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+.google-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
 
 
 
@@ -326,7 +341,14 @@ body {
   </div>
 </div>
 <script>
-
+      
+<!-- Google API script -->
+<script src="https://razan-naif.github.io/CareerQuest-Team/login-page.html" async defer></script>
+<script>
+function handleCredentialResponse(response) {
+  console.log("Encoded JWT ID token: " + response.credential);
+  alert("تم تسجيل الدخول بنجاح عبر Google ✅");
+}
 // دالة للتنقل بين الصفحات الثلاث - تخفي كل الصفحات أولاً، ثم تُظهر الصفحة المطلوبة فقط.
 function showPage(page) {
   document.getElementById('login').classList.add('hidden');   // إخفاء صفحة تسجيل الدخول
@@ -400,4 +422,5 @@ window.addEventListener('load', () => {
 </script>
 
 </body>
+
 </html>
